@@ -1,1 +1,15 @@
-console.log("COCK_team loaded");
+setTimeout(()=>{
+
+
+document.querySelectorAll(".player-card")
+
+.forEach(card=>{
+
+
+card.classList.add("hide-start");
+
+
+});
+
+
+},3000);
