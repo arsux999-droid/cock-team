@@ -1,190 +1,130 @@
-body{
+<!DOCTYPE html>
+<html lang="ru">
 
-background:#050505;
-color:white;
-font-family:Arial, sans-serif;
-margin:0;
+<head>
 
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>COCK_team | Roster</title>
 
-header{
+<link rel="stylesheet" href="css/roster.css">
 
-text-align:center;
-padding:30px;
-border-bottom:2px solid red;
+</head>
 
-}
 
+<body>
 
-header h1{
 
-font-size:35px;
+<header>
 
-}
+<h1>🐔 COCK_team</h1>
 
+<nav>
+<a href="index.html">Главная</a>
+<a href="roster.html">Состав</a>
+<a href="news.html">Новости</a>
+<a href="matches.html">Матчи</a>
+</nav>
 
-nav a{
+</header>
 
-color:red;
-text-decoration:none;
-margin:20px;
-font-weight:bold;
 
-}
 
+<main>
 
 
-main{
+<h2>ACTIVE ROSTER</h2>
 
-text-align:center;
-padding-top:40px;
 
-}
+<div class="roster">
 
 
-h2{
+<img class="team-img" src="images/roster.png">
 
-font-size:40px;
 
-}
+<div class="player p1">
 
+<h3>QCO1D</h3>
 
+<p>Имя: Твоё имя</p>
+<p>Возраст: 17</p>
+<p>Рост: 180</p>
+<p>Роль: Lurker</p>
 
+<p>
+Основной люркер команды.
+Сильная игра в клатчах.
+</p>
 
-.team-image{
+</div>
 
-position:relative;
 
-width:900px;
-margin:40px auto;
 
-}
+<div class="player p2">
 
+<h3>SIMON</h3>
 
-.team-image img{
+<p>Имя: Семён Кириллин</p>
+<p>Возраст: 17</p>
+<p>Рост: 178</p>
+<p>Роль: Support</p>
 
-width:100%;
+<p>
+Поддержка команды.
+</p>
 
-border:2px solid red;
+</div>
 
-box-shadow:0 0 30px red;
 
-}
 
+<div class="player p3">
 
+<h3>HATRED</h3>
 
+<p>Возраст:18</p>
+<p>Рост:182</p>
+<p>Роль: IGL</p>
 
-.player-area{
+<p>
+Капитан команды.
+</p>
 
-position:absolute;
+</div>
 
-width:20%;
-height:60%;
 
-cursor:pointer;
 
-}
 
+<div class="player p4">
 
+<h3>KYOSUKE</h3>
 
+<p>Возраст:17</p>
+<p>Рост:179</p>
+<p>Роль: AWPer</p>
 
-.p1{
+<p>
+Снайпер команды.
+</p>
 
-left:0%;
-top:35%;
+</div>
 
-}
 
 
-.p2{
+</div>
 
-left:25%;
-top:35%;
 
-}
+</main>
 
 
-.p3{
 
-left:50%;
-top:35%;
+<footer>
 
-}
+© 2026 COCK_team
 
+</footer>
 
-.p4{
 
-left:75%;
-top:35%;
+</body>
 
-}
-
-
-
-
-.card{
-
-position:absolute;
-
-bottom:-20px;
-left:50%;
-
-transform:
-translateX(-50%)
-translateY(40px);
-
-
-width:230px;
-
-background:rgba(0,0,0,0.9);
-
-border:2px solid red;
-
-padding:20px;
-
-text-align:left;
-
-opacity:0;
-
-transition:.4s;
-
-pointer-events:none;
-
-box-shadow:0 0 20px red;
-
-}
-
-
-
-.player-area:hover .card{
-
-opacity:1;
-
-transform:
-translateX(-50%)
-translateY(0);
-
-
-}
-
-
-
-
-
-.card h3{
-
-color:red;
-font-size:25px;
-
-}
-
-
-footer{
-
-margin-top:100px;
-border-top:2px solid red;
-padding:30px;
-text-align:center;
-
-}
+</html>
