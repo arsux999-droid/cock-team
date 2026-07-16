@@ -193,27 +193,67 @@
 
 <script>
 
-
-const cards = document.querySelectorAll(".player-card");
-
+const cards = document.querySelectorAll(".player");
 
 
+/* стартовая анимация */
 
-// стартовая анимация
+window.addEventListener("load",()=>{
 
-setTimeout(()=>{
+    cards.forEach(card=>{
+        card.classList.add("show");
+    });
 
 
-cards.forEach(card=>{
+    setTimeout(()=>{
 
+        cards.forEach(card=>{
+            card.classList.remove("show");
+            card.classList.add("hidden");
+        });
 
-card.classList.add("hide");
+    },2500);
 
 
 });
 
 
-},2200);
+
+/* появление только при наведении */
+
+cards.forEach(card=>{
+
+
+    card.addEventListener("mouseenter",()=>{
+
+
+        cards.forEach(c=>{
+
+            c.classList.remove("hovered");
+
+        });
+
+
+        card.classList.add("hovered");
+
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+
+        card.classList.remove("hovered");
+
+
+    });
+
+
+});
+
+
+</script>
 
 
 
