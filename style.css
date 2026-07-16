@@ -1,214 +1,89 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+*{
 
-body {
-    background: #050505;
-    color: white;
-}
+margin:0;
+padding:0;
+box-sizing:border-box;
 
-
-/* ШАПКА */
-
-header {
-    background: #090909;
-    border-bottom: 2px solid #b30000;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    color: red;
-    font-size: 40px;
-    letter-spacing: 5px;
-}
-
-
-nav {
-    margin-top: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-
-nav a:hover {
-    color: red;
-}
-
-
-
-/* СТРАНИЦА РОСТЕРА */
-
-
-.roster {
-    text-align: center;
-    padding: 40px;
-}
-
-
-.roster h2 {
-    font-size: 45px;
-    color: red;
-    margin-bottom: 30px;
-}
-
-
-
-/* КАРТИНКА СОСТАВА */
-
-
-.team-image {
-    position: relative;
-    max-width: 1400px;
-    margin: auto;
-}
-
-
-.team-image img {
-
-    width: 100%;
-    display: block;
-
-    border: 2px solid #800000;
-
-    box-shadow:
-    0 0 30px red;
+font-family:Arial,sans-serif;
 
 }
 
 
 
-/* ИГРОКИ */
+body{
 
+background:#050505;
 
-.player {
-
-    position: absolute;
-
-    width: 220px;
-    height: 500px;
-
-    cursor: pointer;
+color:white;
 
 }
 
 
 
-/* позиции игроков */
+/* HEADER */
 
-.qco1d {
-    left: 5%;
-    top: 25%;
+
+header{
+
+text-align:center;
+
+padding:30px;
+
+background:#090909;
+
+border-bottom:2px solid red;
+
 }
 
 
-.s1mon {
-    left: 27%;
-    top: 25%;
+header h1{
+
+font-size:50px;
+
+color:#ff0000;
+
+letter-spacing:5px;
+
 }
 
 
-.hatred {
-    left: 46%;
-    top: 20%;
-}
+header p{
 
+color:#aaa;
 
-.kysoyke {
-    right: 5%;
-    top: 25%;
-}
-
-
-
-/* ОКНО ИНФЫ */
-
-
-.info {
-
-
-    position: absolute;
-
-    left: 50%;
-    bottom: 30px;
-
-    transform:
-    translateX(-50%)
-    translateY(50px);
-
-
-    background:
-    rgba(0,0,0,0.9);
-
-
-    border: 2px solid red;
-
-    width: 260px;
-
-    padding: 20px;
-
-    text-align: center;
-
-    opacity: 0;
-
-    transition: 0.4s;
-
+margin:10px;
 
 }
 
 
 
-.info h3 {
+nav{
 
-    color:red;
-
-    font-size:28px;
+margin-top:20px;
 
 }
 
 
 
-.info p {
+nav a{
 
-    margin-top:10px;
+color:white;
 
-    font-size:18px;
+text-decoration:none;
 
-}
+margin:15px;
 
+font-size:18px;
 
-
-/* АНИМАЦИЯ */
-
-.player:hover .info {
-
-
-    opacity:1;
-
-    transform:
-    translateX(-50%)
-    translateY(0);
-
+transition:.3s;
 
 }
 
 
 
-.player:hover {
+nav a:hover{
 
-
-    filter:
-    drop-shadow(0 0 20px red);
-
+color:red;
 
 }
 
@@ -216,33 +91,249 @@ nav a:hover {
 
 
 
-/* НИЗ */
+
+/* ROSTER */
 
 
-footer {
+.roster{
+
+padding:40px;
+
+text-align:center;
+
+}
 
 
-    margin-top:50px;
+.roster h2{
 
-    padding:25px;
+font-size:40px;
 
-    text-align:center;
+color:red;
 
-    border-top:2px solid red;
+margin-bottom:30px;
+
+}
 
 
-    color:#aaa;
+
+
+
+.team-photo{
+
+position:relative;
+
+width:90%;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+
+
+
+.team-photo img{
+
+width:100%;
+
+display:block;
+
+border:2px solid red;
+
+box-shadow:0 0 30px red;
+
+}
+
+
+
+
+
+
+/* ЗОНЫ ИГРОКОВ */
+
+
+.player{
+
+position:absolute;
+
+height:75%;
+
+width:18%;
+
+cursor:pointer;
+
+z-index:5;
+
+}
+
+
+
+
+.qco1d{
+
+left:5%;
+
+top:15%;
+
+}
+
+
+
+
+.hatred{
+
+left:40%;
+
+top:10%;
+
+}
+
+
+
+
+.s1mon{
+
+left:62%;
+
+top:15%;
+
+}
+
+
+
+
+.kysoyke{
+
+right:5%;
+
+top:15%;
+
+}
+
+
+
+
+
+
+
+
+/* КАРТОЧКА */
+
+
+.card{
+
+position:absolute;
+
+bottom:-100px;
+
+left:50%;
+
+
+transform:translateX(-50%);
+
+
+width:280px;
+
+
+background:rgba(0,0,0,.95);
+
+
+border:2px solid red;
+
+
+padding:20px;
+
+
+opacity:0;
+
+
+visibility:hidden;
+
+
+transition:.3s;
 
 
 }
 
 
 
-footer a {
+.card h3{
+
+color:red;
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
 
 
-    color:red;
 
-    text-decoration:none;
+
+.card p{
+
+margin:8px;
+
+font-size:16px;
+
+}
+
+
+
+
+.player:hover .card{
+
+
+opacity:1;
+
+
+visibility:visible;
+
+
+bottom:-80px;
+
+
+box-shadow:0 0 25px red;
+
+
+}
+
+
+
+
+.player:hover{
+
+
+filter:drop-shadow(0 0 20px red);
+
+
+}
+
+
+
+
+
+
+footer{
+
+
+text-align:center;
+
+padding:30px;
+
+margin-top:40px;
+
+border-top:2px solid red;
+
+color:#aaa;
+
+}
+
+
+
+footer p{
+
+margin:10px;
 
 }
