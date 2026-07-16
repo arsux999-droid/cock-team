@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,16 +37,13 @@
 <h2>ACTIVE ROSTER</h2>
 
 
-<div class="team-photo">
+<div class="roster">
 
 
-<img src="images/team.png">
+<img class="team-img" src="images/roster.png">
 
 
-<div class="players">
-
-
-<div class="player-card">
+<div class="player p1">
 
 <h3>QCO1D</h3>
 
@@ -63,7 +61,7 @@
 
 
 
-<div class="player-card">
+<div class="player p2">
 
 <h3>SIMON</h3>
 
@@ -74,26 +72,22 @@
 
 <p>
 Поддержка команды.
-Грамотные решения.
 </p>
 
 </div>
 
 
 
-
-<div class="player-card">
+<div class="player p3">
 
 <h3>HATRED</h3>
 
-<p>Имя: Алексей</p>
-<p>Возраст: 18</p>
-<p>Рост: 182</p>
+<p>Возраст:18</p>
+<p>Рост:182</p>
 <p>Роль: IGL</p>
 
 <p>
 Капитан команды.
-Стратег игры.
 </p>
 
 </div>
@@ -101,28 +95,23 @@
 
 
 
-<div class="player-card">
+<div class="player p4">
 
 <h3>KYOSUKE</h3>
 
-<p>Имя: Дмитрий</p>
-<p>Возраст: 17</p>
-<p>Рост: 179</p>
+<p>Возраст:17</p>
+<p>Рост:179</p>
 <p>Роль: AWPer</p>
 
 <p>
 Снайпер команды.
-Главная сила с AWP.
 </p>
 
 </div>
 
 
-</div>
-
 
 </div>
-
 
 
 </main>
@@ -136,30 +125,6 @@
 </footer>
 
 
-
-<script>
-
-const cards = document.querySelectorAll(".player-card");
-
-
-cards.forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-cards.forEach(c=>{
-c.classList.remove("active");
-});
-
-card.classList.add("active");
-
-});
-
-
-});
-
-
-</script>
-
-
 </body>
+
 </html>
