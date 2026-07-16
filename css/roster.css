@@ -1,68 +1,111 @@
 body{
 background:#050505;
 color:white;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 
 
 .title{
+
 text-align:center;
-margin:50px;
 font-size:40px;
+margin:50px;
+
 }
 
 
 
-.roster{
+.team-image{
 
 width:900px;
+
 margin:auto;
 
-display:flex;
-justify-content:center;
-gap:0;
-
 position:relative;
 
 }
 
 
 
-.player{
-
-position:relative;
-
-width:225px;
-
-cursor:pointer;
-
-}
-
-
-
-.player img{
+.team-image img{
 
 width:900px;
-
-height:auto;
 
 display:block;
 
+border:2px solid red;
+
+box-shadow:0 0 30px red;
+
 }
 
 
 
-.player .info{
+
+
+.player-zone{
 
 position:absolute;
 
-top:390px;
-left:-40px;
+top:200px;
+
+width:210px;
+
+height:550px;
+
+}
+
+
+
+
+
+.qcoid{
+
+left:0;
+
+}
+
+
+
+.simon{
+
+left:225px;
+
+}
+
+
+
+.hatred{
+
+left:450px;
+
+}
+
+
+
+.kyosyke{
+
+left:675px;
+
+}
+
+
+
+
+
+
+.card{
+
+position:absolute;
+
+top:330px;
+
+left:0;
 
 width:260px;
 
-background:rgba(0,0,0,0.95);
+background:rgba(0,0,0,.95);
 
 border:2px solid red;
 
@@ -72,15 +115,16 @@ opacity:0;
 
 transform:translateY(30px);
 
-transition:0.3s;
+transition:.3s;
 
-z-index:10;
+z-index:5;
 
 }
 
 
 
-.player:hover .info{
+
+.player-zone:hover .card{
 
 opacity:1;
 
@@ -90,7 +134,8 @@ transform:translateY(0);
 
 
 
-.info h2{
+
+.card h2{
 
 color:red;
 
@@ -100,13 +145,15 @@ text-align:center;
 
 
 
-.info p{
+.card p{
 
 font-size:15px;
 
 line-height:1.4;
 
 }
+
+
 
 
 
