@@ -1,135 +1,193 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<title>COCK_team | Roster</title>
+body{
 
-<link rel="stylesheet" href="css/roster.css">
+margin:0;
 
-</head>
+background:#000;
 
-<body>
+font-family:Arial, sans-serif;
 
+}
 
-<div class="roster-page">
 
 
-<div class="roster-box">
+.roster-page{
 
-<img src="images/roster.png" class="roster-img">
+width:100%;
 
+min-height:100vh;
 
-<!-- QCO1D -->
+display:flex;
 
-<div class="player qco1d">
+justify-content:center;
 
-<div class="info">
+align-items:center;
 
-<h2>QCO1D</h2>
+}
 
-<p>Имя: Твоё имя</p>
 
-<p>Возраст: 17</p>
 
-<p>Рост: 180</p>
+.roster-box{
 
-<p>Роль: Lurker</p>
+position:relative;
 
-<p>
-Описание: Основной люркер команды.
-Сильная игра в клатчах.
-</p>
+width:1200px;
 
-</div>
+}
 
-</div>
 
 
+.roster-img{
 
-<!-- S1MON -->
+width:100%;
 
-<div class="player s1mon">
+display:block;
 
-<div class="info">
+}
 
-<h2>S1MON</h2>
 
-<p>Имя: Семён Кириллин</p>
 
-<p>Возраст: 17</p>
 
-<p>Рост: 178</p>
 
-<p>Роль: Support</p>
+.player{
 
-<p>
-Описание: Поддержка команды.
-</p>
+position:absolute;
 
-</div>
+width:200px;
 
-</div>
+height:350px;
 
+cursor:pointer;
 
+}
 
 
-<!-- HATRED -->
 
-<div class="player hatred">
 
-<div class="info">
 
-<h2>HATRED</h2>
+.info{
 
-<p>Возраст: 18</p>
 
-<p>Рост: 182</p>
+position:absolute;
 
-<p>Роль: IGL</p>
+top:250px;
 
-<p>
-Описание: Капитан команды.
-</p>
+left:50%;
 
-</div>
 
-</div>
+transform:translateX(-50%);
 
 
+width:270px;
 
 
+background:#080000;
 
-<!-- KYOSYKE -->
 
-<div class="player kyosyke">
+border:2px solid red;
 
-<div class="info">
 
-<h2>KYOSYKE</h2>
+border-radius:15px;
 
-<p>Возраст: 17</p>
 
-<p>Рост: 179</p>
+padding:20px;
 
-<p>Роль: AWPer</p>
 
-<p>
-Описание: Снайпер команды.
-</p>
+color:white;
 
-</div>
 
-</div>
+text-align:center;
 
 
+box-shadow:0 0 25px red;
 
 
-</div>
+opacity:0;
 
 
-</div>
+transition:.35s;
 
 
+z-index:10;
 
-</body>
-</html>
+
+}
+
+
+
+
+
+.player:hover .info{
+
+
+opacity:1;
+
+
+top:180px;
+
+
+}
+
+
+
+
+.info h2{
+
+
+color:red;
+
+
+font-size:25px;
+
+
+margin-top:0;
+
+
+}
+
+
+
+
+
+/* позиции игроков */
+
+
+.qco1d{
+
+left:7%;
+
+top:35%;
+
+}
+
+
+
+.s1mon{
+
+left:29%;
+
+top:35%;
+
+}
+
+
+
+
+.hatred{
+
+left:50%;
+
+top:35%;
+
+}
+
+
+
+
+
+.kyosyke{
+
+left:72%;
+
+top:35%;
+
+}
