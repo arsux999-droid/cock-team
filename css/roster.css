@@ -1,56 +1,29 @@
 body{
-
 background:#050505;
-
 color:white;
-
-font-family:Arial;
-
-}
-
-
-
-header{
-
-text-align:center;
-
-padding:30px;
-
-border-bottom:2px solid red;
-
-}
-
-
-
-nav a{
-
-color:red;
-
-margin:15px;
-
-text-decoration:none;
-
+font-family:Arial, sans-serif;
 }
 
 
 
 .title{
-
 text-align:center;
-
-margin:40px;
-
+margin:50px;
 font-size:40px;
-
 }
 
 
 
 .roster{
 
-display:flex;
+width:900px;
+margin:auto;
 
+display:flex;
 justify-content:center;
+gap:0;
+
+position:relative;
 
 }
 
@@ -60,7 +33,7 @@ justify-content:center;
 
 position:relative;
 
-width:900px;
+width:225px;
 
 cursor:pointer;
 
@@ -70,45 +43,38 @@ cursor:pointer;
 
 .player img{
 
-width:100%;
+width:900px;
+
+height:auto;
 
 display:block;
-
-border:2px solid red;
-
-box-shadow:0 0 30px red;
 
 }
 
 
 
-
-.info{
+.player .info{
 
 position:absolute;
 
-bottom:20px;
+top:390px;
+left:-40px;
 
-right:20px;
+width:260px;
 
-
-background:rgba(0,0,0,.9);
+background:rgba(0,0,0,0.95);
 
 border:2px solid red;
 
-
-padding:25px;
-
-width:300px;
-
+padding:20px;
 
 opacity:0;
 
-
 transform:translateY(30px);
 
-transition:.4s;
+transition:0.3s;
 
+z-index:10;
 
 }
 
@@ -128,7 +94,7 @@ transform:translateY(0);
 
 color:red;
 
-font-size:30px;
+text-align:center;
 
 }
 
@@ -136,6 +102,22 @@ font-size:30px;
 
 .info p{
 
-margin:8px;
+font-size:15px;
+
+line-height:1.4;
+
+}
+
+
+
+footer{
+
+margin-top:80px;
+
+text-align:center;
+
+border-top:1px solid red;
+
+padding:20px;
 
 }
