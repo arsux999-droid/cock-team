@@ -24,19 +24,14 @@
 <nav>
 
 <a href="index.html">Главная</a>
-
 <a href="roster.html">Состав</a>
-
 <a href="news.html">Новости</a>
-
 <a href="matches.html">Матчи</a>
 
 </nav>
 
 
 </header>
-
-
 
 
 
@@ -50,15 +45,11 @@
 <div class="roster">
 
 
-<img class="team-img" src="images/roster.png">
+<img class="team-img" src="images/roster.png" alt="COCK_team roster">
 
 
 
-<div class="players">
-
-
-
-<div class="players">
+<div class="player p1">
 
 
 <h3>QCO1D</h3>
@@ -84,7 +75,7 @@
 
 
 
-<div class="player-card">
+<div class="player p2">
 
 
 <h3>SIMON</h3>
@@ -111,7 +102,7 @@
 
 
 
-<div class="player-card">
+<div class="player p3">
 
 
 <h3>HATRED</h3>
@@ -139,11 +130,10 @@
 
 
 
-<div class="player-card">
+<div class="player p4">
 
 
 <h3>KYOSUKE</h3>
-
 
 <p>Имя: Дмитрий</p>
 
@@ -164,16 +154,11 @@
 
 
 
-
-
 </div>
 
-
-</div>
 
 
 </main>
-
 
 
 
@@ -189,72 +174,47 @@
 
 
 
-
-
 <script>
+
 
 const cards = document.querySelectorAll(".player");
 
 
-/* стартовая анимация */
+
+// стартовое появление
 
 window.addEventListener("load",()=>{
 
-    cards.forEach(card=>{
-        card.classList.add("show");
-    });
 
+cards.forEach(card=>{
 
-    setTimeout(()=>{
-
-        cards.forEach(card=>{
-            card.classList.remove("show");
-            card.classList.add("hidden");
-        });
-
-    },2500);
-
+card.classList.add("show");
 
 });
 
 
 
-/* появление только при наведении */
+// через 2.5 секунды убрать
+
+setTimeout(()=>{
+
 
 cards.forEach(card=>{
 
 
-    card.addEventListener("mouseenter",()=>{
+card.classList.remove("show");
 
-
-        cards.forEach(c=>{
-
-            c.classList.remove("hovered");
-
-        });
-
-
-        card.classList.add("hovered");
-
-
-    });
-
-
-
-    card.addEventListener("mouseleave",()=>{
-
-
-        card.classList.remove("hovered");
-
-
-    });
+card.classList.add("hidden");
 
 
 });
 
 
-</script>
+},2500);
 
+
+
+});
 
 
 
@@ -272,23 +232,16 @@ card.addEventListener("mouseenter",()=>{
 cards.forEach(c=>{
 
 
-c.classList.remove("active");
+c.classList.remove("hovered");
 
 
 });
 
 
-
-card.classList.remove("hide");
-
-
-card.classList.add("active");
-
+card.classList.add("hovered");
 
 
 });
-
-
 
 
 
@@ -296,7 +249,7 @@ card.classList.add("active");
 card.addEventListener("mouseleave",()=>{
 
 
-card.classList.remove("active");
+card.classList.remove("hovered");
 
 
 });
@@ -308,7 +261,6 @@ card.classList.remove("active");
 
 
 </script>
-
 
 
 
