@@ -1,51 +1,248 @@
-body {
-    background: #080808;
-    color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body {
+    background: #050505;
+    color: white;
+}
+
+
+/* ШАПКА */
+
+header {
+    background: #090909;
+    border-bottom: 2px solid #b30000;
+    padding: 20px;
     text-align: center;
 }
 
-
-header {
-    padding: 30px;
-    background: #111;
-    border-bottom: 2px solid red;
-}
-
-
-h1 {
-    font-size: 50px;
+header h1 {
     color: red;
+    font-size: 40px;
+    letter-spacing: 5px;
 }
 
 
 nav {
-    margin-top: 20px;
+    margin-top: 15px;
 }
-
 
 nav a {
     color: white;
     text-decoration: none;
-    background: #b00000;
-    padding: 12px 25px;
-    margin: 10px;
-    border-radius: 10px;
-    display: inline-block;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 
 nav a:hover {
-    background: red;
+    color: red;
 }
 
 
-.player, .news, .match {
 
-    background: #151515;
-    border: 1px solid red;
-    margin: 20px;
+/* СТРАНИЦА РОСТЕРА */
+
+
+.roster {
+    text-align: center;
+    padding: 40px;
+}
+
+
+.roster h2 {
+    font-size: 45px;
+    color: red;
+    margin-bottom: 30px;
+}
+
+
+
+/* КАРТИНКА СОСТАВА */
+
+
+.team-image {
+    position: relative;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+.team-image img {
+
+    width: 100%;
+    display: block;
+
+    border: 2px solid #800000;
+
+    box-shadow:
+    0 0 30px red;
+
+}
+
+
+
+/* ИГРОКИ */
+
+
+.player {
+
+    position: absolute;
+
+    width: 220px;
+    height: 500px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* позиции игроков */
+
+.qco1d {
+    left: 5%;
+    top: 25%;
+}
+
+
+.s1mon {
+    left: 27%;
+    top: 25%;
+}
+
+
+.hatred {
+    left: 46%;
+    top: 20%;
+}
+
+
+.kysoyke {
+    right: 5%;
+    top: 25%;
+}
+
+
+
+/* ОКНО ИНФЫ */
+
+
+.info {
+
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform:
+    translateX(-50%)
+    translateY(50px);
+
+
+    background:
+    rgba(0,0,0,0.9);
+
+
+    border: 2px solid red;
+
+    width: 260px;
+
     padding: 20px;
-    border-radius: 15px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transition: 0.4s;
+
+
+}
+
+
+
+.info h3 {
+
+    color:red;
+
+    font-size:28px;
+
+}
+
+
+
+.info p {
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+
+
+/* АНИМАЦИЯ */
+
+.player:hover .info {
+
+
+    opacity:1;
+
+    transform:
+    translateX(-50%)
+    translateY(0);
+
+
+}
+
+
+
+.player:hover {
+
+
+    filter:
+    drop-shadow(0 0 20px red);
+
+
+}
+
+
+
+
+
+/* НИЗ */
+
+
+footer {
+
+
+    margin-top:50px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-top:2px solid red;
+
+
+    color:#aaa;
+
+
+}
+
+
+
+footer a {
+
+
+    color:red;
+
+    text-decoration:none;
 
 }
