@@ -20,16 +20,23 @@
 
 <h1>🐔 COCK_team</h1>
 
+
 <nav>
 
 <a href="index.html">Главная</a>
+
 <a href="roster.html">Состав</a>
+
 <a href="news.html">Новости</a>
+
 <a href="matches.html">Матчи</a>
 
 </nav>
 
+
 </header>
+
+
 
 
 
@@ -43,7 +50,7 @@
 <div class="team-photo">
 
 
-<img src="images/team.png" alt="COCK_team roster">
+<img src="images/team.png" alt="team">
 
 
 
@@ -51,84 +58,78 @@
 
 
 
-<div class="player" data-player="qco1d">
-
-
-<div class="hitbox"></div>
-
-
 <div class="player-card">
+
 
 <h3>QCO1D</h3>
 
 <p>Имя: Твоё имя</p>
+
 <p>Возраст: 17</p>
+
 <p>Рост: 180</p>
+
 <p>Роль: Lurker</p>
+
 
 <p>
 Основной люркер команды.
 Сильная игра в клатчах.
 </p>
 
-</div>
 
 </div>
 
 
 
-
-
-<div class="player" data-player="simon">
-
-
-<div class="hitbox"></div>
 
 
 <div class="player-card">
 
+
 <h3>SIMON</h3>
 
 <p>Имя: Семён Кириллин</p>
+
 <p>Возраст: 17</p>
+
 <p>Рост: 178</p>
+
 <p>Роль: Support</p>
+
 
 <p>
 Поддержка команды.
 Грамотные решения.
 </p>
 
-</div>
 
 </div>
 
 
 
 
-
-
-<div class="player" data-player="hatred">
-
-
-<div class="hitbox"></div>
 
 
 <div class="player-card">
 
+
 <h3>HATRED</h3>
 
 <p>Имя: Алексей</p>
+
 <p>Возраст: 18</p>
+
 <p>Рост: 182</p>
+
 <p>Роль: IGL</p>
+
 
 <p>
 Капитан команды.
 Стратег игры.
 </p>
 
-</div>
 
 </div>
 
@@ -136,20 +137,18 @@
 
 
 
-
-
-<div class="player" data-player="kyosuke">
-
-
-<div class="hitbox"></div>
 
 
 <div class="player-card">
 
+
 <h3>KYOSUKE</h3>
 
+
 <p>Имя: Дмитрий</p>
+
 <p>Возраст: 17</p>
+
 <p>Рост: 179</p>
 
 <p>Роль: AWPer</p>
@@ -163,18 +162,19 @@
 
 </div>
 
-</div>
 
 
-
-</div>
 
 
 </div>
 
+
+</div>
 
 
 </main>
+
+
 
 
 
@@ -187,7 +187,89 @@
 
 
 
-<script src="js/script.js"></script>
+
+
+
+
+<script>
+
+
+const cards = document.querySelectorAll(".player-card");
+
+
+
+
+// стартовая анимация
+
+setTimeout(()=>{
+
+
+cards.forEach(card=>{
+
+
+card.classList.add("hide");
+
+
+});
+
+
+},2200);
+
+
+
+
+
+
+// наведение
+
+
+cards.forEach(card=>{
+
+
+card.addEventListener("mouseenter",()=>{
+
+
+cards.forEach(c=>{
+
+
+c.classList.remove("active");
+
+
+});
+
+
+
+card.classList.remove("hide");
+
+
+card.classList.add("active");
+
+
+
+});
+
+
+
+
+
+
+card.addEventListener("mouseleave",()=>{
+
+
+card.classList.remove("active");
+
+
+});
+
+
+
+});
+
+
+
+</script>
+
+
 
 
 </body>
