@@ -162,3 +162,99 @@ border-top:1px solid red;
 color:#777;
 
 }
+/* NEWS + MATCHES */
+
+h2{
+
+text-align:center;
+font-size:40px;
+margin-top:40px;
+
+}
+
+
+
+.news-card,
+.match-card{
+
+
+width:700px;
+
+margin:40px auto;
+
+padding:25px;
+
+
+background:rgba(0,0,0,0.8);
+
+
+border:2px solid red;
+
+
+box-shadow:
+0 0 20px red;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.news-card:hover,
+.match-card:hover{
+
+
+transform:scale(1.03);
+
+
+box-shadow:
+0 0 40px red;
+
+
+}
+
+
+
+.news-card h3,
+.match-card h3{
+
+
+color:red;
+
+font-size:24px;
+
+
+}
+
+
+
+.news-card p,
+.match-card p{
+
+
+color:white;
+
+font-size:16px;
+
+line-height:1.5;
+
+
+}
+
+
+
+.subtitle{
+
+
+text-align:center;
+
+color:red;
+
+font-size:28px;
+
+margin-top:50px;
+
+
+}
