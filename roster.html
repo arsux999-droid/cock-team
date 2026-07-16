@@ -2,16 +2,12 @@
 <html lang="ru">
 
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>COCK_team | Roster</title>
 
-
-<link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/roster.css">
-
 
 </head>
 
@@ -23,172 +19,147 @@
 
 <h1>🐔 COCK_team</h1>
 
-
 <nav>
-
 <a href="index.html">Главная</a>
-
 <a href="roster.html">Состав</a>
-
 <a href="news.html">Новости</a>
-
 <a href="matches.html">Матчи</a>
-
 </nav>
 
 </header>
 
 
 
-
 <main>
 
 
-<h2 class="roster-title">
-ACTIVE ROSTER
-</h2>
+<h2>ACTIVE ROSTER</h2>
 
 
-
-<div class="roster-wrapper">
-
-
-<img class="team-image"
-src="images/roster.png">
+<div class="team-photo">
 
 
-
-<!-- зоны игроков -->
-
-<div class="player-zone zone1"
-data-player="qco1d">
-</div>
+<img src="images/team.png">
 
 
-<div class="player-zone zone2"
-data-player="simon">
-</div>
+<div class="players">
 
 
-<div class="player-zone zone3"
-data-player="hatred">
-</div>
+<div class="player-card">
 
-
-<div class="player-zone zone4"
-data-player="kyosyke">
-</div>
-
-
-
-
-
-<!-- карточки -->
-
-
-<div class="cards">
-
-
-
-<div class="player-card qco1d">
-
-<h2>QCO1D</h2>
+<h3>QCO1D</h3>
 
 <p>Имя: Твоё имя</p>
+<p>Возраст: 17</p>
+<p>Рост: 180</p>
+<p>Роль: Lurker</p>
 
-<p>Возраст:17</p>
-
-<p>Рост:180</p>
-
-<p>Роль:Lurker</p>
-
-<p>Основной люркер команды.</p>
+<p>
+Основной люркер команды.
+Сильная игра в клатчах.
+</p>
 
 </div>
 
 
 
+<div class="player-card">
 
-
-<div class="player-card simon">
-
-<h2>SIMON</h2>
+<h3>SIMON</h3>
 
 <p>Имя: Семён Кириллин</p>
+<p>Возраст: 17</p>
+<p>Рост: 178</p>
+<p>Роль: Support</p>
 
-<p>Возраст:17</p>
-
-<p>Рост:178</p>
-
-<p>Роль:Support</p>
-
-<p>Поддержка команды.</p>
-
-</div>
-
-
-
-
-
-<div class="player-card hatred">
-
-<h2>HATRED</h2>
-
-<p>Возраст:18</p>
-
-<p>Рост:182</p>
-
-<p>Роль:IGL</p>
-
-<p>Капитан команды.</p>
+<p>
+Поддержка команды.
+Грамотные решения.
+</p>
 
 </div>
 
 
 
 
+<div class="player-card">
 
-<div class="player-card kyosyke">
+<h3>HATRED</h3>
 
-<h2>KYOSYKE</h2>
+<p>Имя: Алексей</p>
+<p>Возраст: 18</p>
+<p>Рост: 182</p>
+<p>Роль: IGL</p>
 
-<p>Возраст:17</p>
-
-<p>Рост:179</p>
-
-<p>Роль:AWPer</p>
-
-<p>Снайпер команды.</p>
-
-</div>
-
-
+<p>
+Капитан команды.
+Стратег игры.
+</p>
 
 </div>
 
 
 
+
+<div class="player-card">
+
+<h3>KYOSUKE</h3>
+
+<p>Имя: Дмитрий</p>
+<p>Возраст: 17</p>
+<p>Рост: 179</p>
+<p>Роль: AWPer</p>
+
+<p>
+Снайпер команды.
+Главная сила с AWP.
+</p>
+
 </div>
+
+
+</div>
+
+
+</div>
+
 
 
 </main>
 
 
 
-
 <footer>
 
-<p>
 © 2026 COCK_team
-</p>
 
 </footer>
 
 
 
-<script src="js/script.js"></script>
+<script>
+
+const cards = document.querySelectorAll(".player-card");
+
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+cards.forEach(c=>{
+c.classList.remove("active");
+});
+
+card.classList.add("active");
+
+});
+
+
+});
+
+
+</script>
 
 
 </body>
-
 </html>
