@@ -8,7 +8,7 @@ body{
 margin:0;
 background:#050505;
 color:white;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 
 }
 
@@ -22,7 +22,6 @@ text-align:center;
 padding-top:35px;
 
 }
-
 
 
 header h1{
@@ -70,7 +69,8 @@ font-size:40px;
 
 
 
-.roster{
+
+.team-photo{
 
 position:relative;
 
@@ -84,7 +84,6 @@ border:2px solid red;
 box-shadow:
 0 0 30px red;
 
-
 overflow:hidden;
 
 }
@@ -93,7 +92,7 @@ overflow:hidden;
 
 
 
-.team-img{
+.team-photo img{
 
 width:100%;
 height:100%;
@@ -105,127 +104,107 @@ object-fit:cover;
 
 
 
-.player{
+.players{
 
 position:absolute;
 
-width:210px;
+left:0;
+bottom:0;
 
-background:rgba(0,0,0,0.85);
+width:100%;
+height:220px;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:flex-end;
+
+padding:20px;
+
+}
+
+
+
+
+.player-card{
+
+
+width:210px;
+height:200px;
+
+
+background:rgba(0,0,0,.85);
 
 border:2px solid red;
 
+
 padding:15px;
+
 
 text-align:left;
 
+
 opacity:0;
 
-transform:translateY(40px);
 
-transition:.5s;
+transform:translateY(80px);
+
+
+transition:
+opacity .4s,
+transform .4s,
+scale .3s;
+
+
+animation:spawn 1s forwards;
 
 
 }
 
 
 
-
-.player h3{
-
-color:red;
-font-size:24px;
-
-margin-top:0;
-
-}
+/* появление при загрузке */
 
 
+.player-card:nth-child(1){
 
-.player p{
-
-margin:8px 0;
-font-size:14px;
-
-}
-
-
-
-/* позиции игроков */
-
-
-.p1{
-
-left:30px;
-bottom:30px;
-
-}
-
-
-.p2{
-
-left:245px;
-bottom:30px;
-
-}
-
-
-
-.p3{
-
-right:245px;
-bottom:30px;
-
-}
-
-
-
-.p4{
-
-right:30px;
-bottom:30px;
-
-}
-
-
-
-/* стартовая анимация */
-
-
-.player{
-
-animation:show 1s forwards;
-
-}
-
-
-
-.p1{
 animation-delay:.2s;
+
 }
 
-.p2{
+
+.player-card:nth-child(2){
+
 animation-delay:.4s;
+
 }
 
-.p3{
+
+.player-card:nth-child(3){
+
 animation-delay:.6s;
+
 }
 
-.p4{
+
+.player-card:nth-child(4){
+
 animation-delay:.8s;
+
 }
 
 
 
 
-@keyframes show{
+
+@keyframes spawn{
 
 
 from{
 
 opacity:0;
-transform:translateY(80px);
+transform:translateY(100px);
 
 }
 
@@ -242,40 +221,74 @@ transform:translateY(0);
 
 
 
+/* после появления скрываем */
 
-/* после загрузки карточки исчезают */
 
+.hide{
 
-.roster:hover .player{
+opacity:0!important;
 
-opacity:0;
+transform:translateY(80px)!important;
 
 }
 
 
 
 
-/* наведение на место игрока */
+
+.player-card h3{
 
 
-.p1:hover,
-.p2:hover,
-.p3:hover,
-.p4:hover{
+color:red;
+
+font-size:22px;
+
+margin:0 0 10px;
+
+
+}
+
+
+
+.player-card p{
+
+margin:7px 0;
+
+font-size:14px;
+
+}
+
+
+
+
+/* активная карточка */
+
+
+.player-card.active{
 
 
 opacity:1!important;
 
-transform:scale(1.08)!important;
+transform:
+translateY(0)
+scale(1.12)!important;
 
-box-shadow:0 0 25px red;
+
+box-shadow:
+0 0 30px red;
+
+
+z-index:5;
+
 
 }
+
 
 
 
 
 footer{
+
 
 border-top:2px solid red;
 
@@ -284,5 +297,6 @@ text-align:center;
 padding:30px;
 
 margin-top:60px;
+
 
 }
