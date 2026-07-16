@@ -1,16 +1,56 @@
+*{
+box-sizing:border-box;
+}
+
+
 body{
+
+margin:0;
 background:#050505;
 color:white;
-font-family:Arial,sans-serif;
+font-family:Arial, sans-serif;
+
+}
+
+
+header{
+
+text-align:center;
+padding:25px;
+border-bottom:2px solid red;
+
+}
+
+
+header h1{
+
+font-size:38px;
+
+}
+
+
+nav a{
+
+color:red;
+text-decoration:none;
+margin:0 20px;
+font-weight:bold;
+
 }
 
 
 
-.title{
+main{
 
 text-align:center;
-font-size:40px;
-margin:50px;
+padding:40px;
+
+}
+
+
+main h2{
+
+font-size:42px;
 
 }
 
@@ -18,153 +58,84 @@ margin:50px;
 
 .team-image{
 
-width:900px;
-
-margin:auto;
-
 position:relative;
+width:900px;
+margin:40px auto;
 
 }
 
 
-
 .team-image img{
 
-width:900px;
-
+width:100%;
 display:block;
 
 border:2px solid red;
-
 box-shadow:0 0 30px red;
 
 }
 
 
 
-
-
-.player-zone{
+.player-card{
 
 position:absolute;
-
-top:200px;
-
-width:210px;
-
-height:550px;
-
-}
-
-
-
-
-
-.qcoid{
-
-left:0;
-
-}
-
-
-
-.simon{
-
-left:225px;
-
-}
-
-
-
-.hatred{
-
-left:450px;
-
-}
-
-
-
-.kyosyke{
-
-left:675px;
-
-}
-
-
-
-
-
-
-.card{
-
-position:absolute;
-
-top:330px;
-
-left:0;
-
-width:260px;
-
-background:rgba(0,0,0,.95);
-
+background:rgba(0,0,0,0.85);
 border:2px solid red;
-
 padding:20px;
-
-opacity:0;
-
-transform:translateY(30px);
-
-transition:.3s;
-
-z-index:5;
+width:230px;
+text-align:left;
 
 }
 
 
-
-
-.player-zone:hover .card{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-
-
-.card h2{
+.player-card h3{
 
 color:red;
-
-text-align:center;
-
-}
-
-
-
-.card p{
-
-font-size:15px;
-
-line-height:1.4;
+font-size:28px;
 
 }
 
 
+
+.card1{
+
+bottom:30px;
+left:30px;
+
+}
+
+
+.card2{
+
+bottom:30px;
+left:250px;
+
+}
+
+
+.card3{
+
+bottom:30px;
+right:250px;
+
+}
+
+
+.card4{
+
+bottom:30px;
+right:30px;
+
+}
 
 
 
 footer{
 
-margin-top:80px;
-
+border-top:2px solid red;
 text-align:center;
-
-border-top:1px solid red;
-
-padding:20px;
+padding:30px;
+margin-top:50px;
 
 }
